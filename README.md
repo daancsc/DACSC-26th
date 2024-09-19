@@ -1,7 +1,7 @@
 # DACSC-26th
 大安電研第26屆的上課範例程式碼
 
-# 如何開啟ipynb檔
+## 如何開啟ipynb檔
 進入 [Colab](https://colab.research.google.com/)
 
 選擇 **上傳筆記本**
