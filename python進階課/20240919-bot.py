@@ -21,5 +21,17 @@ async def on_message(msg):
         return
     await msg.channel.send(msg.content)
 
+#在colab上執行
+# ================
+async def main():
+    await bot.start("你的token")
 
+await main()
+# ================
+
+#在本地執行
+# ================
 bot.run('你的token')
+# ================
+
+#只要留一個就好
