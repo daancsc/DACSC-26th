@@ -35,7 +35,7 @@ def call_api(msg):
 
     if not msg: return '這段訊息是空的'
 
-    chat_session.send_message_async(msg) # 傳送 msg 內容給 Gemini api
+    chat_session.send_message(msg) # 傳送 msg 內容給 Gemini api
     return chat_session.last.text # 將 api 的回應返還給主程式
 
 
