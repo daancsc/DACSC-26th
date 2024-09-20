@@ -29,13 +29,13 @@ prompt = """
 
 """
 
-async def call_api(msg):
+def call_api(msg):
     chat_session = model.start_chat(history=[
     ])
 
     if not msg: return '這段訊息是空的'
 
-    await chat_session.send_message_async(msg) # 傳送 msg 內容給 Gemini api
+    chat_session.send_message_async(msg) # 傳送 msg 內容給 Gemini api
     return chat_session.last.text # 將 api 的回應返還給主程式
 
 
@@ -93,7 +93,7 @@ async def on_message(msg):
         return
     history = await update_history("使用者說: " + msg.content)
     print(":" + msg.content)
-    response = await call_api(prompt + history)
+    response = call_api(prompt + history)
     await update_history(response)
     await msg.channel.send(response)
     print(response)
