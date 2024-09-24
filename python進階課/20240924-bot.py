@@ -77,6 +77,7 @@ async def on_ready():
 def islink(content): # 判定訊息是否是連結
     return re.findall(r'https?://\S+', content) # 如果是連結就返回連結 + 連結以外的文字
 
+#爬取網站title
 def gettitle(website_url):
     '''
     取得網頁的 title 標籤並回傳
